@@ -25,7 +25,7 @@
                         <div class="text w-100">
                             <h2>@yield('signup-login-title')</h2>
                             <p>@yield('signup-login-description')</p>
-                            <a href="#" class="btn btn-white btn-outline-white">@yield('signup-login-navigate')</a>
+                            <a href="@yield('signup-login-route')" class="btn btn-white btn-outline-white">@yield('signup-login-navigate')</a>
                         </div>
                     </div>
                     <div class="login-wrap p-4 p-lg-5">

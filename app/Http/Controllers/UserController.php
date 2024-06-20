@@ -7,19 +7,28 @@ use App\Http\Requests\RegisterFormRequest;
 
 class UserController extends Controller
 {
-    public function loginFormDisplay()
+    /**
+     * Login Form Display
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+     */
+    public function loginFormDisplay(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('login');
     }
 
-    public function signupFormDisplay()
+    /**
+     * Registration Form Display
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+     */
+    public function
+    signupFormDisplay(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         return view('register');
     }
 
     public function login(LoginFormRequest $request)
     {
-
+        dd($request->all());
     }
 
     public function register(RegisterFormRequest $request)

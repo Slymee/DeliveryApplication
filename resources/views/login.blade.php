@@ -12,6 +12,10 @@
     Don't have an account?
 @endsection
 
+@section('signup-login-route')
+    {{ route('signup-view') }}
+@endsection
+
 @section('signup-login-navigate')
     Sign Up
 @endsection

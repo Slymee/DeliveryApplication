@@ -12,6 +12,10 @@
     Already have an account?
 @endsection
 
+@section('signup-login-route')
+    {{ route('login-view') }}
+@endsection
+
 @section('signup-login-navigate')
     Sign In
 @endsection
@@ -21,30 +25,46 @@
 @endsection
 
 @section('login-register-form')
-    <form action="#" class="signin-form">
+    <form action="{{ route('register') }}" class="signin-form" method="POST">
+        @csrf
         <div class="form-group mb-3">
             <label class="label" for="full_name">Full Name</label>
-            <input type="text" class="form-control" placeholder="Full Name" name="full_name" id="full_name" value="{{ old('full_name') }}" required>
+            <input type="text" class="form-control" placeholder="Full Name" name="full_name" id="full_name" value="{{ old('full_name') }}">
+            @error('full_name')
+                <div class="text-danger">{{ $message }}<sup>*</sup></div>
+            @enderror
         </div>
         <div class="form-group mb-3">
             <label class="label" for="address">Address</label>
-            <input type="text" class="form-control" placeholder="Address" name="address" id="address" value="{{ old('address') }}" required>
+            <input type="text" class="form-control" placeholder="Address" name="address" id="address" value="{{ old('address') }}">
+            @error('address')
+                <div class="text-danger">{{ $message }}<sup>*</sup></div>
+            @enderror
         </div>
         <div class="form-group mb-3">
             <label class="label" for="email">Email Address</label>
-            <input type="text" class="form-control" placeholder="Email Address" name="email" id="email" value="{{ old('email') }}" required>
+            <input type="text" class="form-control" placeholder="Email Address" name="email" id="email" value="{{ old('email') }}">
+            @error('email')
+                <div class="text-danger">{{ $message }}<sup>*</sup></div>
+            @enderror
         </div>
         <div class="form-group mb-3">
             <label class="label" for="username">Username</label>
-            <input type="text" class="form-control" placeholder="Username" name="username" id="username" value="{{ old('username') }}" required>
+            <input type="text" class="form-control" placeholder="Username" name="username" id="username" value="{{ old('username') }}">
+            @error('username')
+                <div class="text-danger">{{ $message }}<sup>*</sup></div>
+            @enderror
         </div>
         <div class="form-group mb-3">
             <label class="label" for="password">Password</label>
-            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+            @error('password')
+                <div class="text-danger">{{ $message }}<sup>*</sup></div>
+            @enderror
         </div>
         <div class="form-group mb-3">
-            <label class="label" for="confirm_password">Confirm Password</label>
-            <input type="password" class="form-control" placeholder="Password" name="confirm_password" id="confirm_password" required>
+            <label class="label" for="password_confirmation">Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Password" name="password_confirmation" id="password_confirmation">
         </div>
         <div class="form-group">
             <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
