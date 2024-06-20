@@ -88,3 +88,10 @@ body{
 .signup label:hover{
     text-decoration: underline;
 }
+
+.text-danger{
+    color: red;
+    margin-top: -20px;
+    margin-bottom: 15px ;
+    font-size: 90%;
+}

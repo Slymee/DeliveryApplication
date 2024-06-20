@@ -19,4 +19,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login-register', [UserController::class, 'loginFormDisplay'])->name('login-register');
+/**x
+ * Authentication routes
+ */
+Route::get('/login', [UserController::class, 'loginFormDisplay'])->name('login-view');
+Route::get('/signup', [UserController::class, 'signupFormDisplay'])->name('signup-view');
+
+Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::post('/register', [UserController::class, 'register'])->name('register');
