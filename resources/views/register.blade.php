@@ -35,7 +35,7 @@
             @enderror
         </div>
         <div class="form-group mb-3">
-            <label class="label" for="address">Address</label>
+            <label class="label" for="address">Address (Street, Ward no., City, District)</label>
             <input type="text" class="form-control" placeholder="Address" name="address" id="address" value="{{ old('address') }}">
             @error('address')
                 <div class="text-danger">{{ $message }}<sup>*</sup></div>

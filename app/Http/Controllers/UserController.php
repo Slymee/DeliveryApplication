@@ -33,6 +33,6 @@ class UserController extends Controller
 
     public function register(RegisterFormRequest $request)
     {
-
+        dd($request->all());
     }
 }

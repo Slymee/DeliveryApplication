@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ValidAddressFormat;
+use App\Rules\ValidFullNameFormat;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterFormRequest extends FormRequest
@@ -22,8 +24,8 @@ class RegisterFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'full_name' => ['required','bail', 'string', 'max:50'],
-            'address' => ['required', 'bail', 'string', 'max:50'],
+            'full_name' => ['required','bail', 'string', 'max:50', new ValidFullNameFormat()],
+            'address' => ['required', 'bail', 'string', new ValidAddressFormat()],
             'email' => ['required', 'bail', 'email'],
             'username' => ['required', 'bail'],
             'password' => ['required', 'bail', 'min:8', 'confirmed'],
