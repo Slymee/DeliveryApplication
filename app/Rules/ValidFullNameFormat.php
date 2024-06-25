@@ -17,7 +17,7 @@ class ValidFullNameFormat implements ValidationRule
         $regex = $regex = '/^[a-zA-Z]+ [a-zA-Z]+$/';
 
         if (!preg_match($regex, $value)) {
-            $fail(__('The full name must contain only letters, spaces and complete name.'));
+            $fail(__('Must contain only letters, spaces and complete name.'));
         }
     }
 }

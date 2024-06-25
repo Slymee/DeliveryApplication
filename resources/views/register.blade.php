@@ -69,6 +69,9 @@
         <div class="form-group">
             <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
         </div>
+        @if(session()->has('message'))
+            <div class="text-danger">{{ session()->get('message') }}</div>
+        @endif
 {{--        <div class="form-group d-md-flex">--}}
 {{--            <div class="w-50 text-left">--}}
 {{--                <label class="checkbox-wrap checkbox-primary mb-0">Remember Me--}}

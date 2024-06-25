@@ -26,8 +26,8 @@ class RegisterFormRequest extends FormRequest
         return [
             'full_name' => ['required','bail', 'string', 'max:50', new ValidFullNameFormat()],
             'address' => ['required', 'bail', 'string', new ValidAddressFormat()],
-            'email' => ['required', 'bail', 'email'],
-            'username' => ['required', 'bail'],
+            'email' => ['required', 'bail', 'email', 'unique:users'],
+            'username' => ['required', 'bail', 'unique:users'],
             'password' => ['required', 'bail', 'min:8', 'confirmed'],
         ];
     }

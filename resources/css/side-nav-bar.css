@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    line-height: 1.6;
+}
+
+.main-section{
+    min-height: 100vh;
+    height: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.sidebar {
+    background: rgb(247,89,89);
+    background: linear-gradient(90deg, rgba(247,89,89,1) 0%, rgba(243,85,135,1) 100%);
+    color: white;
+    padding: 20px;
+    transition: transform 0.5s ease; /* Add transition for smooth animation */
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px 0;
+}
+
+.menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.menu a i {
+    margin-right: 10px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255 ,255, .5);
+    border-radius: 5px;
+    color: #000;
+}
+
+.content {
+    padding: 20px;
+    transition: transform 0.5s ease;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.toggle-btn:hover {
+    color: #000;
+}
+
+/* Toggle sidebar animation */
+.sidebar-collapsed {
+    transform: translateX(-240px); /* Move sidebar off-screen */
+}
