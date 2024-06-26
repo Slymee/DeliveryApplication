@@ -22,8 +22,8 @@ Route::get('/', function () {
 /**x
  * Authentication routes
  */
-Route::get('/login', [UserController::class, 'loginFormDisplay'])->name('login-view');
-Route::get('/signup', [UserController::class, 'signupFormDisplay'])->name('signup-view');
 
-Route::post('/login', [UserController::class, 'login'])->name('login');
-Route::post('/register', [UserController::class, 'register'])->name('register');
+Route::group(['middleware' => 'auth-protect'], function (){
+    Route::get('/login', [UserController::class, 'loginFormDisplay'])->name('login-view');
+    Route::post('/login', [UserController::class, 'login'])->name('login');
+});

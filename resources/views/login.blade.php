@@ -9,15 +9,16 @@
 @endsection
 
 @section('signup-login-description')
-    Don't have an account?
+    Your gateway to seamless deliveries.
 @endsection
 
 @section('signup-login-route')
-    {{ route('signup-view') }}
+{{--    {{ route('signup-view') }}--}}
+    #
 @endsection
 
 @section('signup-login-navigate')
-    Sign Up
+    Buckle Up
 @endsection
 
 @section('form-title')
