@@ -21,7 +21,8 @@ class RoleDetect
         }
 
         if (!Auth::user()->isAdmin()){
-            abort(403, 'No permission to access this page.');
+            return redirect()->route('home');
+//            abort(403, 'No permission to access this page.');
         }
         return $next($request);
     }
