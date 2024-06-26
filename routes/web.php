@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+/**x
+ * Authentication routes
+ */
+
+Route::group(['middleware' => 'auth-protect'], function (){
+    Route::get('/login', [UserController::class, 'loginFormDisplay'])->name('login-view');
+    Route::post('/login', [UserController::class, 'login'])->name('login');
 });
