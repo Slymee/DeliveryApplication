@@ -4,21 +4,47 @@
     Delivery App: Dashboard
 @endsection
 
-@section('sidebar')
-    <aside class="sidebar">
-    <div class="sidebar-header">
-        <h3>Delivery App</h3>
-        <i class="fa-solid fa-bars toggle-btn" id="toggle-btn"></i>
-    </div>
-    <ul class="menu">
-        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-        <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
-    </ul>
-    </aside>
+@section('vite-resource')
+    @vite(['resources/css/admin-dashboard.css'])
+@endsection
 
-    <main class="content">
-        <p>Main content goes here.</p>
-    </main>
+@section('header-bar')
+    <div class="dashboard-title">Dashboard</div>
+    <div class="user-title">Username</div>
+@endsection
+
+@section('content')
+    <div class="stats-container">
+        <div class="stats-box">
+            <div>
+                <div>17000</div>
+                <div>Users</div>
+            </div>
+            <div>asdasd</div>
+        </div>
+
+        <div class="stats-box">
+            <div>
+                <div>17000</div>
+                <div>Completed</div>
+            </div>
+            <div>asdasd</div>
+        </div>
+
+        <div class="stats-box">
+            <div>
+                <div>17000</div>
+                <div>Active Users</div>
+            </div>
+            <div>asdasd</div>
+        </div>
+
+        <div class="stats-box">
+            <div>
+                <div>17000</div>
+                <div>Earnings</div>
+            </div>
+            <div>asdasd</div>
+        </div>
+    </div>
 @endsection
