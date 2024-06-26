@@ -92,3 +92,14 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.dashboard-title{
+    font-size: 120%;
+    font-weight: bold;
+}
+.user-title{
+    font-size: 120%;
+    font-weight: bold;
+    color: rgb(247,89,89);
+}
+

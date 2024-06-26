@@ -10,7 +10,7 @@
 
 @section('header-bar')
     <div class="dashboard-title">Dashboard</div>
-    <div class="user-title">Username</div>
+    <div class="user-title">{{ auth()->user()->username}}</div>
 @endsection
 
 @section('content')

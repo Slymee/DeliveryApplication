@@ -16,8 +16,12 @@ class RoleDetect
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->is_admin){
-            
+        if (!Auth::check()){
+            return redirect()->route('login');
+        }
+
+        if (!Auth::user()->isAdmin()){
+            abort(403, 'No permission to access this page.');
         }
         return $next($request);
     }

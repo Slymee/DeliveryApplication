@@ -24,7 +24,7 @@
                 <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
-                <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                <li><a href="{{ route('logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
             </ul>
         </aside>
 
